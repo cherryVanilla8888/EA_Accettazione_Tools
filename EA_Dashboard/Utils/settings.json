@@ -1,0 +1,11 @@
+{
+  "user": "devietti",
+  "connection_strings": [
+            "Server=localhost\\SQLEXPRESS;Database=BookShelf;Trusted_Connection=True;",
+            "Server=localhost\\SQLEXPRESS;Database=BookShelf;Trusted_Connection=True;"
+            ],
+  "files_folder": "c:\\users\\Alby\\desktop\\rapporti di prova\\",
+  "installer_filepath": "C:\\Users\\Alby\\source\\repos\\CodeGenerator\\CodeGenerator Setup\\Debug\\setup.exe",
+  "version_filepath": "c:\\users\\Alby\\desktop\\version_log.txt"
+  
+}
