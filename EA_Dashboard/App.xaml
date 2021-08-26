@@ -32,6 +32,7 @@
                 <ResourceDictionary Source="Converters/Converters.xaml" />
                 <ResourceDictionary Source="Styles/TemplatesAndLayouts.xaml" />
                 <ResourceDictionary Source="Styles/DefaultStyles.xaml" />
+                <ResourceDictionary Source="Styles/FontsAndSizes.xaml" />
                 <ResourceDictionary Source="Styles/ResponsiveSizes.xaml" />
                 
             </ResourceDictionary.MergedDictionaries>

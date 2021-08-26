@@ -16,6 +16,12 @@
     </Window.DataContext>
     
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
         
     </Grid>
 </Window>
