@@ -1,27 +1,61 @@
-﻿<Window x:Class="EA_Dashboard.Views.MainWindowView"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        xmlns:local="clr-namespace:EA_Dashboard.Views"
-        xmlns:vm="clr-namespace:EA_Dashboard.ViewModels"
-        mc:Ignorable="d"
-        WindowStartupLocation="CenterScreen"
-        Background="{StaticResource mainWindowViewBackgroundBrush}"
-        Title="MainWindowView" Height="450" Width="450">
+﻿<Window
+    x:Class="EA_Dashboard.Views.MainWindowView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:dashboard="clr-namespace:EA_Dashboard.Components.Dashboard"
+    xmlns:local="clr-namespace:EA_Dashboard.Views"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:menu="clr-namespace:WPF_ControlsLibrary.Menu;assembly=WPF_ControlsLibrary"
+    xmlns:vm="clr-namespace:EA_Dashboard.ViewModels"
+    Title="MainWindowView"
+    Width="700"
+    Height="660"
+    WindowStyle="SingleBorderWindow"
+    Background="{StaticResource mainWindowViewBackgroundBrush}"
+    KeyDown="Window_KeyDown"
+    WindowStartupLocation="CenterScreen"
+    mc:Ignorable="d">
 
     <Window.DataContext>
-        <vm:MainWindowViewModel/>
+        <vm:MainWindowViewModel />
     </Window.DataContext>
-    
+
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="auto"/>
-            <RowDefinition/>
-            <RowDefinition Height="auto"/>
+            <RowDefinition Height="70" />
+            <RowDefinition Height="20" />
+            <RowDefinition />
+            <RowDefinition Height="40" />
         </Grid.RowDefinitions>
 
-        
+        <!--  Header Bar  -->
+        <dashboard:DashboardHeader />
+
+        <Grid Grid.Row="2">
+
+            <!--  Drawer Menu  -->
+            <menu:DrawerMenu
+                Margin="0,19,0,0"
+                HorizontalAlignment="Left"
+                Panel.ZIndex="2"
+                BackgroundColor="{StaticResource PopupWindowDarkBackgroundBrush}"
+                BorderColor="Black"
+                BorderThickness="0,3,3,3"
+                IconColor="White"
+                Items="{Binding DrawerMenuItems}"
+                ItemsTemplate="{StaticResource DrawerMenuItemTemplate}"
+                MenuCornerRadius="0" />
+
+            <!--  Content Box  -->
+            <Border
+                BorderBrush="{StaticResource DarkBackgroundColor}"
+                BorderThickness="2"
+                Background="White"
+                Grid.Column="1"
+                Margin="110,20,30,0"
+                Panel.ZIndex="1" />
+        </Grid>
     </Grid>
 </Window>

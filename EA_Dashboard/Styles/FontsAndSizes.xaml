@@ -2,6 +2,19 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:sys="clr-namespace:System;assembly=mscorlib">
 
-    <sys:Double x:Key="H1_FontSize">25</sys:Double>
+
+    
+    <FontFamily x:Key="FiraSans">pack://application:,,,/Resources/Fonts/Fira Sans/#Fira Sans</FontFamily>
+    <FontFamily x:Key="Dosis">pack://application:,,,/Resources/Fonts/Dosis/#Dosis</FontFamily>
+    <FontFamily x:Key="Architects Daughter">pack://application:,,,/Resources/Fonts/Architects_Daughter/#Architects Daughter</FontFamily>
+    <FontFamily x:Key="Klee One">pack://application:,,,/Resources/Fonts/Klee_One/#Klee One</FontFamily>
+    <FontFamily x:Key="Neucha">pack://application:,,,/Resources/Fonts/Neucha/#Neucha</FontFamily>
+    <FontFamily x:Key="NotoSansTC">pack://application:,,,/Resources/Fonts/Noto Sans TC/#Noto Sans TC</FontFamily>
+    <FontFamily x:Key="EncodeSans">pack://application:,,,/Resources/Fonts/Encode_Sans/#Encode Sans</FontFamily>
+    <FontFamily x:Key="EncodeSansCondensed">pack://application:,,,/Resources/Fonts/Encode_Sans_Condensed/#Encode Sans Condensed</FontFamily>
+    <FontFamily x:Key="DefaultFont">pack://application:,,,/Resources/Fonts/Dosis/#Dosis</FontFamily>
+    <sys:Double x:Key="H1_FontSize">28</sys:Double>
     <sys:Double x:Key="H2_FontSize">22</sys:Double>
+        
+   
 </ResourceDictionary>

@@ -108,6 +108,8 @@
       <DependentUpon>DashboardHeader.xaml</DependentUpon>
     </Compile>
     <Compile Include="Data\DataService.cs" />
+    <Compile Include="Models\DrawerMenuItem.cs" />
+    <Compile Include="Utils\NavigationManager.cs" />
     <Compile Include="Utils\SettingsManager.cs" />
     <Compile Include="Utils\VersionHelper.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
@@ -184,16 +186,92 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Resource Include="Resources\Fonts\Architects_Daughter\ArchitectsDaughter-Regular.ttf" />
+    <Resource Include="Resources\Fonts\Klee_One\KleeOne-Regular.ttf" />
+    <Resource Include="Resources\Fonts\Klee_One\KleeOne-SemiBold.ttf" />
+    <Resource Include="Resources\Fonts\Neucha\Neucha-Regular.ttf" />
+    <Resource Include="Resources\Fonts\Encode_Sans_Condensed\EncodeSans_Condensed-Black.ttf" />
+    <Resource Include="Resources\Fonts\Encode_Sans_Condensed\EncodeSans_Condensed-Bold.ttf" />
+    <Resource Include="Resources\Fonts\Encode_Sans_Condensed\EncodeSans_Condensed-ExtraBold.ttf" />
+    <Resource Include="Resources\Fonts\Encode_Sans_Condensed\EncodeSans_Condensed-ExtraLight.ttf" />
+    <Resource Include="Resources\Fonts\Encode_Sans_Condensed\EncodeSans_Condensed-Light.ttf" />
+    <Resource Include="Resources\Fonts\Encode_Sans_Condensed\EncodeSans_Condensed-Medium.ttf" />
+    <Resource Include="Resources\Fonts\Encode_Sans_Condensed\EncodeSans_Condensed-Regular.ttf" />
+    <Resource Include="Resources\Fonts\Encode_Sans_Condensed\EncodeSans_Condensed-SemiBold.ttf" />
+    <Resource Include="Resources\Fonts\Encode_Sans_Condensed\EncodeSans_Condensed-Thin.ttf" />
+    <Resource Include="Resources\Fonts\Encode_Sans\EncodeSans-Black.ttf" />
+    <Resource Include="Resources\Fonts\Encode_Sans\EncodeSans-Bold.ttf" />
+    <Resource Include="Resources\Fonts\Encode_Sans\EncodeSans-ExtraBold.ttf" />
+    <Resource Include="Resources\Fonts\Encode_Sans\EncodeSans-ExtraLight.ttf" />
+    <Resource Include="Resources\Fonts\Encode_Sans\EncodeSans-Light.ttf" />
+    <Resource Include="Resources\Fonts\Encode_Sans\EncodeSans-Medium.ttf" />
+    <Resource Include="Resources\Fonts\Encode_Sans\EncodeSans-Regular.ttf" />
+    <Resource Include="Resources\Fonts\Encode_Sans\EncodeSans-SemiBold.ttf" />
+    <Resource Include="Resources\Fonts\Encode_Sans\EncodeSans-Thin.ttf" />
+    <Resource Include="Resources\Fonts\Encode_Sans_Semi_Condensed\EncodeSansSemiCondensed-Black.ttf" />
+    <Resource Include="Resources\Fonts\Encode_Sans_Semi_Condensed\EncodeSansSemiCondensed-Bold.ttf" />
+    <Resource Include="Resources\Fonts\Encode_Sans_Semi_Condensed\EncodeSansSemiCondensed-ExtraBold.ttf" />
+    <Resource Include="Resources\Fonts\Encode_Sans_Semi_Condensed\EncodeSansSemiCondensed-ExtraLight.ttf" />
+    <Resource Include="Resources\Fonts\Encode_Sans_Semi_Condensed\EncodeSansSemiCondensed-Light.ttf" />
+    <Resource Include="Resources\Fonts\Encode_Sans_Semi_Condensed\EncodeSansSemiCondensed-Medium.ttf" />
+    <Resource Include="Resources\Fonts\Encode_Sans_Semi_Condensed\EncodeSansSemiCondensed-Regular.ttf" />
+    <Resource Include="Resources\Fonts\Encode_Sans_Semi_Condensed\EncodeSansSemiCondensed-SemiBold.ttf" />
+    <Resource Include="Resources\Fonts\Encode_Sans_Semi_Condensed\EncodeSansSemiCondensed-Thin.ttf" />
+    <Resource Include="Resources\Fonts\Dosis\Dosis-Bold.ttf" />
+    <Resource Include="Resources\Fonts\Dosis\Dosis-ExtraBold.ttf" />
+    <Resource Include="Resources\Fonts\Dosis\Dosis-ExtraLight.ttf" />
+    <Resource Include="Resources\Fonts\Dosis\Dosis-Light.ttf" />
+    <Resource Include="Resources\Fonts\Dosis\Dosis-Medium.ttf" />
+    <Resource Include="Resources\Fonts\Dosis\Dosis-Regular.ttf" />
+    <Resource Include="Resources\Fonts\Dosis\Dosis-SemiBold.ttf" />
+    <Resource Include="Resources\Fonts\Noto Sans TC\NotoSansTC-Black.otf" />
+    <Resource Include="Resources\Fonts\Noto Sans TC\NotoSansTC-Bold.otf" />
+    <Resource Include="Resources\Fonts\Noto Sans TC\NotoSansTC-Light.otf" />
+    <Resource Include="Resources\Fonts\Noto Sans TC\NotoSansTC-Medium.otf" />
+    <Resource Include="Resources\Fonts\Noto Sans TC\NotoSansTC-Regular.otf" />
+    <Resource Include="Resources\Fonts\Noto Sans TC\NotoSansTC-Thin.otf" />
+    <Resource Include="Resources\Fonts\Fira Sans\OFL.txt" />
+    <Resource Include="Resources\Fonts\Architects_Daughter\OFL.txt" />
+    <Resource Include="Resources\Fonts\Klee_One\OFL.txt" />
+    <Resource Include="Resources\Fonts\Neucha\OFL.txt" />
+    <Content Include="Resources\Images\app_logo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Resources\Images\app_logo_ref.png" />
+    <Resource Include="Resources\Images\check.png" />
     <Content Include="Utils\settings.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Resource Include="Resources\Fonts\Fira Sans\FiraSans-Black.ttf" />
+    <Resource Include="Resources\Fonts\Fira Sans\FiraSans-BlackItalic.ttf" />
+    <Resource Include="Resources\Fonts\Fira Sans\FiraSans-Bold.ttf" />
+    <Resource Include="Resources\Fonts\Fira Sans\FiraSans-BoldItalic.ttf" />
+    <Resource Include="Resources\Fonts\Fira Sans\FiraSans-ExtraBold.ttf" />
+    <Resource Include="Resources\Fonts\Fira Sans\FiraSans-ExtraBoldItalic.ttf" />
+    <Resource Include="Resources\Fonts\Fira Sans\FiraSans-ExtraLight.ttf" />
+    <Resource Include="Resources\Fonts\Fira Sans\FiraSans-ExtraLightItalic.ttf" />
+    <Resource Include="Resources\Fonts\Fira Sans\FiraSans-Italic.ttf" />
+    <Resource Include="Resources\Fonts\Fira Sans\FiraSans-Light.ttf" />
+    <Resource Include="Resources\Fonts\Fira Sans\FiraSans-LightItalic.ttf" />
+    <Resource Include="Resources\Fonts\Fira Sans\FiraSans-Medium.ttf" />
+    <Resource Include="Resources\Fonts\Fira Sans\FiraSans-MediumItalic.ttf" />
+    <Resource Include="Resources\Fonts\Fira Sans\FiraSans-Regular.ttf" />
+    <Resource Include="Resources\Fonts\Fira Sans\FiraSans-SemiBold.ttf" />
+    <Resource Include="Resources\Fonts\Fira Sans\FiraSans-SemiBoldItalic.ttf" />
+    <Resource Include="Resources\Fonts\Fira Sans\FiraSans-Thin.ttf" />
+    <Resource Include="Resources\Fonts\Fira Sans\FiraSans-ThinItalic.ttf" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Behaviors\" />
-    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\WPF_ControlsLibrary\WPF_ControlsLibrary\WPF_ControlsLibrary.csproj">
+      <Project>{089126f4-cd15-4517-98c7-ba725ed2bb69}</Project>
+      <Name>WPF_ControlsLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.4.1.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.1.0\build\MaterialDesignThemes.targets')" />

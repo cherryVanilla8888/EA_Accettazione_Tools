@@ -1,5 +1,7 @@
-﻿using EA_Dashboard.Utils;
+﻿using EA_Dashboard.Models;
+using EA_Dashboard.Utils;
 using EA_Dashboard.Views;
+using MaterialDesignThemes.Wpf;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -14,10 +16,18 @@ namespace EA_Dashboard.ViewModels
     public class MainWindowViewModel : BaseViewModel
     {
         #region Vars
-        private MainWindowView mainWindow;
+        private List<DrawerMenuItem> drawerMenuItems;
+
+
         #endregion
 
         #region Properties
+        public List<DrawerMenuItem> DrawerMenuItems
+        {
+            get { return drawerMenuItems; }
+            set { drawerMenuItems = value; NotifyPropertyChanged(); }
+        }
+
         #endregion
 
         #region Commands
@@ -25,23 +35,24 @@ namespace EA_Dashboard.ViewModels
         public MainWindowViewModel()
         {
 
-            // Debug
-            //DirectoryInfo directoryInfo = Directory.GetParent(Directory.GetParent(Environment.CurrentDirectory).FullName);
-            // Release
-            //string directoryInfo = System.AppDomain.CurrentDomain.BaseDirectory;
-
-            mainWindow = (MainWindowView)System.Windows.Application.Current.MainWindow;
-            initializeProperties();
-            initializeCommands();
+     
+            InitializeProperties();
+            Task.Run(InitializePropertiesAsync);
+            InitializeCommands();
 
         }
-
         #region Initializers
 
-        private void initializeProperties()
+        private async Task InitializePropertiesAsync()
+        {
+            DrawerMenuItems = NavigationManager.GetDrawerMenuItems();
+        }
+
+
+        private void InitializeProperties()
         {
         }
-        private void initializeCommands()
+        private void InitializeCommands()
         {
 
         }

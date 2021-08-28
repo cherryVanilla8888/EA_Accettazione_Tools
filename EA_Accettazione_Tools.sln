@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.31613.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EA_Dashboard", "EA_Dashboard\EA_Dashboard.csproj", "{7E9AED97-F243-49F2-BE37-ECBE1A0BB296}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_ControlsLibrary", "..\WPF_ControlsLibrary\WPF_ControlsLibrary\WPF_ControlsLibrary.csproj", "{089126F4-CD15-4517-98C7-BA725ED2BB69}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{7E9AED97-F243-49F2-BE37-ECBE1A0BB296}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E9AED97-F243-49F2-BE37-ECBE1A0BB296}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E9AED97-F243-49F2-BE37-ECBE1A0BB296}.Release|Any CPU.Build.0 = Release|Any CPU
+		{089126F4-CD15-4517-98C7-BA725ED2BB69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{089126F4-CD15-4517-98C7-BA725ED2BB69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{089126F4-CD15-4517-98C7-BA725ED2BB69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{089126F4-CD15-4517-98C7-BA725ED2BB69}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

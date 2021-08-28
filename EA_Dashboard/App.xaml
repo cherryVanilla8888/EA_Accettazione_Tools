@@ -30,10 +30,10 @@
 
                 <!--  Styles  -->
                 <ResourceDictionary Source="Converters/Converters.xaml" />
-                <ResourceDictionary Source="Styles/TemplatesAndLayouts.xaml" />
                 <ResourceDictionary Source="Styles/DefaultStyles.xaml" />
                 <ResourceDictionary Source="Styles/FontsAndSizes.xaml" />
                 <ResourceDictionary Source="Styles/ResponsiveSizes.xaml" />
+                <ResourceDictionary Source="Styles/TemplatesAndLayouts.xaml" />
                 
             </ResourceDictionary.MergedDictionaries>
 
@@ -41,25 +41,6 @@
             <!--<DataTemplate DataType="{x:Type vm:ViewModel}">
                 <views:View/>
             </DataTemplate>-->
-
-
-            <!--  Colors  -->
-
-            <!--  Main Window Background  -->
-            <LinearGradientBrush x:Key="mainWindowViewBackgroundBrush" StartPoint="0.5,0" EndPoint="0.5,1">
-                <GradientStop Offset="0" Color="White" />
-                <GradientStop Offset="1" Color="Silver" />
-            </LinearGradientBrush>
-
-            <!--  Header & Toolbar  -->
-            <SolidColorBrush x:Key="appBarBackgroundColor" Color="Red" />
-            <SolidColorBrush x:Key="appBarForegroundColor" Color="White" />
-
-            <!--  Strings  -->
-            <sys:String x:Key="AppTitle">TheTitle</sys:String>
-
-
-            <!--  Styles  -->
 
             <!--  Text Block  -->
             <Style x:Key="fieldType1" TargetType="TextBlock">

@@ -1,1 +1,30 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+                    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+                    xmlns:converters="clr-namespace:WPF_ControlsLibrary.Converters;assembly=WPF_ControlsLibrary"
+                    xmlns:menu="clr-namespace:WPF_ControlsLibrary.Menu;assembly=WPF_ControlsLibrary"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+
+    <DataTemplate x:Key="DrawerMenuItemTemplate">
+        <DockPanel Cursor="Hand">
+            <materialDesign:PackIcon 
+                Foreground="{StaticResource OrangeShade}"
+                ToolTip="{Binding Name}"
+                Kind="{Binding Icon}">
+                <materialDesign:PackIcon.Resources>
+                    <Style TargetType="ToolTip">
+                        <Setter Property="Margin" Value="50,0,0,0"/>
+                    </Style>
+                </materialDesign:PackIcon.Resources>
+            </materialDesign:PackIcon>
+            <TextBlock Text="{Binding Name}" 
+                       VerticalAlignment="Center"
+                       FontSize="21"
+                       FontFamily="{StaticResource Neucha}"
+                       Foreground="Silver"
+                       Margin="20,0,0,0"
+                       Visibility="{Binding RelativeSource={RelativeSource AncestorType={x:Type menu:DrawerMenu}, Mode=FindAncestor}, 
+                                            Path=MenuIsClose, Converter={StaticResource InverseBoolToVisConverter}}"/>
+        </DockPanel>
+    </DataTemplate>
+</ResourceDictionary>
